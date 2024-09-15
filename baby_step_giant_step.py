@@ -67,8 +67,7 @@ def giant_step_iteration(g,p,bbstbl, b, mode, c = 0,a = 0):
             print("q:", b)
             print("r: ",bbstbl[gsv])
             return j * b + bbstbl[gsv]
-        else:
-            return "No value found ... :("
+    return "No value found ... :("
 
 def bsgs(g, a, p):
     #bsgs function calculates the 𝑘 value using 𝑔, 𝑎 and 𝑝 values using the Discrete Logarithm Problem with the baby steps and giant steps iteration.
