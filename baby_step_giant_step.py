@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 #The program is meant to calculate the value of 𝑘 which solves the expression: 𝑎 ≡ 𝑔^𝑘
 #This Discrete Logarithm Problem is used to find values in cryptographic algorithms.
-# The bsgs2 implementation was taken from 0xTowel/bsgs.py repository.
+#The bsgs2 implementation was taken from 0xTowel/bsgs.py repository.
 
 #The math package is used for methods necessary for calculations.
 #Both ceil and floor functions are used for calculating the number of iterations performed in the baby step process.
-from math import ceil, floor
+#The sqrt function is used for calculating the iteration limit
+from math import ceil, floor, sqrt
 
 def show_table(tbl, name):
     #show_table function used for displaying the elements of the generated table with a custom format
@@ -30,7 +31,7 @@ def check_prime(p):
 
     if p==2 or p==3: return True
     if p%2==0: return False 
-    for i in range(3, int(pow(p,0.5))+1, 2): 
+    for i in range(3, int(sqrt(p))+1, 2): 
         if p%i==0: 
             return False
     return True 
@@ -101,7 +102,7 @@ def bsgs2(g, a, p):
         #Calculating N to determine the number of operations, p must be a prime number
         #Calculating nh through g^-1 mod p which will be used for the further iterations
 
-    N = ceil(pow(p - 1, 0.5))  # Notice that this option use ceiling value instead of floor
+    N = ceil(sqrt(p-1))  # Notice that this option use ceiling value instead of floor
 
     tbl = {pow(g, i, p): i for i in range(N)} # Baby Step value generator
     show_table(tbl, "Baby step")
