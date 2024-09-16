@@ -8,7 +8,7 @@ The program will ask for the next parameters:
 ```
 𝑝: prime number
 𝑎: integer number
-𝑔: an integer number, primitive root modul of 𝑝 
+𝑔: an integer number, primitive root module of 𝑝 
 ```
 
 The parameters will be asked after the program has started, here is an example:
