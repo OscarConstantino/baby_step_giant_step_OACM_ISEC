@@ -1,7 +1,7 @@
 # baby_step_giant_step_OACM_ISEC
 Baby Step - Giant Step implementation
 
-This discrete log problem algorithm helps to solve `𝑘` in the expression `𝑎 ≡ 𝑔𝑘 mod 𝑝`.
+This discrete log problem algorithm helps to solve `𝑘` in the expression `𝑎 ≡ 𝑔^𝑘 mod 𝑝`.
 
 The program will ask for the next parameters:
 
